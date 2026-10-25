@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob: mediastream:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keywren: Typing Test, Keyboard, Mic, Webcam, Mouse &amp; Screen Tests</title>
+<meta name="description" content="Free online device tests: typing speed test, keyboard tester, mic test, webcam test, dead pixel test, mouse and CPS test, and refresh rate test. Private.">
+<meta name="theme-color" content="#090d10">
+<link rel="canonical" href="https://cinch2108.github.io/keywren/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2319c3d6'/%3E%3Cstop offset='1' stop-color='%238be05a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Crect x='7' y='10' width='18' height='12' rx='2.5' fill='none' stroke='%2305161b' stroke-width='2.2'/%3E%3Cpath d='M11 14h2M15 14h2M19 14h2M12 18h8' stroke='%2305161b' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Keywren">
+<meta property="og:title" content="Keywren: free device and skills tests">
+<meta property="og:description" content="Typing speed, keyboard, microphone, webcam, dead pixel, mouse and refresh rate tests that run in your browser.">
+<meta property="og:url" content="https://cinch2108.github.io/keywren/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Keywren: free device and skills tests">
+<meta name="twitter:description" content="Typing speed, keyboard, microphone, webcam, dead pixel, mouse and refresh rate tests that run in your browser.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Keywren","url":"https://cinch2108.github.io/keywren/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free typing speed test, keyboard tester, microphone test, webcam test, dead pixel and screen test, mouse and CPS test, and monitor refresh rate test. Everything runs locally in the browser."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to tool</a>
+<header><div class="nav">
+  <div class="logo"><i></i>Keywren</div>
+  <nav class="tabs" id="tabs" aria-label="Tools">
+    <a class="tab active" href="./">Typing</a>
+  </nav>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <h1>Typing speed test <span>with live error highlighting.</span></h1>
+  <p>Test your typing, keyboard, mic, webcam, mouse and screen. Free, fast and private: nothing leaves your device.</p>
+  <p class="privacy-note"><span class="dot"></span>Runs 100% in your browser. No uploads, no sign-up.</p>
+</section>
+<!-- AD SLOT: top leaderboard 970x90 (responsive). Paste ad unit inside. -->
+<div class="ad ad-leader" id="ad-top" data-ad-slot="top" aria-label="Advertisement"></div>
+<div class="layout"><div class="content">
+
+<!--view:typing-->
+<section class="view active" id="v-typing" aria-label="Typing speed test">
+  <div class="card">
+    <div class="row between">
+      <div class="seg" id="ty-dur" role="group" aria-label="Test length"><button type="button" data-s="15">15s</button><button type="button" data-s="30">30s</button><button type="button" data-s="60" class="on">60s</button><button type="button" data-s="120">120s</button></div>
+      <div class="row tight"><label class="check"><input type="checkbox" id="ty-punct"> Punctuation</label><label class="check"><input type="checkbox" id="ty-num"> Numbers</label><button type="button" class="btn sm" id="ty-restart">Restart <kbd>Esc</kbd></button></div>
+    </div>
+    <div class="live4 mt">
+      <div class="lv"><b id="ty-time">60</b><span>seconds left</span></div>
+      <div class="lv"><b id="ty-wpm">0</b><span>WPM</span></div>
+      <div class="lv"><b id="ty-acc">100%</b><span>accuracy</span></div>
+      <div class="lv"><b id="ty-err">0</b><span>errors</span></div>
+    </div>
+    <div class="ty-box mt" id="ty-box">
+      <div class="ty-viewport"><div class="ty-words mono" id="ty-words" aria-hidden="true"></div></div>
+      <input id="ty-in" class="ty-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Type the words shown here" aria-describedby="ty-help">
+      <div class="ty-focus" id="ty-focus">Click here or start typing</div>
+    </div>
+    <p class="hint mt2" id="ty-help">The clock starts on your first keystroke. Wrong letters turn red; press Backspace to fix them. Press <kbd>Esc</kbd> for a new text.</p>
+  </div>
+  <div class="card mt result" id="ty-result" hidden>
+    <div class="row between"><h2 class="m0">Your result</h2><span class="pill ok" id="ty-best-flag" hidden>New personal best</span></div>
+    <div class="stats5 mt">
+      <div class="stat hero-stat"><b id="tr-wpm">0</b><span>WPM</span></div>
+      <div class="stat"><b id="tr-acc">0%</b><span>Accuracy</span></div>
+      <div class="stat"><b id="tr-raw">0</b><span>Raw WPM</span></div>
+      <div class="stat"><b id="tr-chars">0 / 0</b><span>Correct / wrong chars</span></div>
+      <div class="stat"><b id="tr-rank">–</b><span>Level</span></div>
+    </div>
+    <div class="row mt"><button type="button" class="btn primary" id="ty-again">Try again</button><span class="hint">or press <kbd>Esc</kbd></span></div>
+  </div>
+  <div class="card mt">
+    <div class="row between"><h2 class="m0">Results history</h2><div class="row tight"><span class="pill" id="ty-best">Best: –</span><button type="button" class="btn sm" id="ty-clear">Clear history</button></div></div>
+    <div class="tablewrap mt2"><table class="tbl" id="ty-hist"><thead><tr><th>When</th><th>Length</th><th>WPM</th><th>Raw</th><th>Accuracy</th></tr></thead><tbody></tbody></table></div>
+    <p class="hint mt2" id="ty-hist-empty">Finish a test to see your results here. They are saved only in this browser.</p>
+  </div>
+</section>
+<!--/view:typing-->
+
+<!--view:keyboard-->
+<section class="view" id="v-keyboard" aria-label="Keyboard tester">
+  <div class="card">
+    <div class="row between"><h2 class="m0">Press every key</h2><div class="row tight"><label class="check"><input type="checkbox" id="kb-block" checked> Block browser shortcuts (F5, Tab, Space…)</label><button type="button" class="btn sm" id="kb-reset">Reset</button></div></div>
+    <div class="kb-wrap mt"><div class="kb" id="kb" role="img" aria-label="On-screen keyboard. Keys light up when pressed."></div></div>
+    <div class="legend mt2"><span><i class="lg down"></i>Held now</span><span><i class="lg done"></i>Tested</span><span><i class="lg"></i>Not pressed yet</span></div>
+    <div class="stats4 mt">
+      <div class="stat"><b id="kb-tested">0 / 0</b><span>Keys tested</span></div>
+      <div class="stat"><b id="kb-held">0</b><span>Held right now</span></div>
+      <div class="stat"><b id="kb-max">0</b><span>Most keys at once</span></div>
+      <div class="stat"><b id="kb-last" class="mono">–</b><span>Last key</span></div>
+    </div>
+  </div>
+  <div class="grid2 mt">
+    <div class="card"><h2>Last key event</h2>
+      <dl class="kv mono" id="kb-info"><dt>event.key</dt><dd id="ki-key">–</dd><dt>event.code</dt><dd id="ki-code">–</dd><dt>keyCode / which</dt><dd id="ki-kc">–</dd><dt>location</dt><dd id="ki-loc">–</dd><dt>repeat</dt><dd id="ki-rep">–</dd><dt>modifiers</dt><dd id="ki-mod">–</dd><dt>type</dt><dd id="ki-type">–</dd></dl>
+    </div>
+    <div class="card"><h2>Ghosting and rollover check</h2>
+      <p class="hint">Hold down several keys at the same time (try <kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd>F</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd> or <kbd>Shift</kbd><kbd>W</kbd><kbd>A</kbd><kbd>D</kbd><kbd>Space</kbd>). Every key you hold should appear below. If one is missing, your keyboard can't register that combination.</p>
+      <div class="keychips mt2" id="kb-heldlist" aria-live="polite"><span class="hint">No keys held</span></div>
+      <p class="mt2"><span class="pill" id="kb-nkro">Rollover: not measured yet</span></p>
+      <h2 class="mt">Event log</h2>
+      <ol class="log mono" id="kb-log"></ol>
+    </div>
+  </div>
+</section>
+<!--/view:keyboard-->
+
+<!--view:mic-->
+<section class="view" id="v-mic" aria-label="Microphone test">
+  <div class="card">
+    <div class="row between"><h2 class="m0">Microphone</h2><span class="pill" id="mic-perm">Permission: not asked yet</span></div>
+    <div class="row mt">
+      <button type="button" class="btn primary" id="mic-start">Start mic test</button>
+      <button type="button" class="btn" id="mic-stop" disabled>Stop</button>
+      <select id="mic-dev" class="grow" disabled aria-label="Choose a microphone"><option value="">Default microphone</option></select>
+    </div>
+    <div class="msg mt2" id="mic-msg" role="status" hidden></div>
+    <div class="meter mt" aria-hidden="true"><div class="meter-fill" id="mic-bar"></div><div class="meter-peak" id="mic-peak"></div><div class="meter-ticks"><span>-60</span><span>-45</span><span>-30</span><span>-15</span><span>0 dB</span></div></div>
+    <div class="row between mt2"><span class="mono big-read" id="mic-db" aria-live="off">– dB</span><span class="pill" id="mic-state">Off</span></div>
+    <canvas id="mic-wave" class="wave mt" width="1200" height="240" aria-label="Live waveform"></canvas>
+    <dl class="kv mono mt" id="mic-info"><dt>Device</dt><dd id="mi-dev">–</dd><dt>Sample rate</dt><dd id="mi-rate">–</dd><dt>Channels</dt><dd id="mi-ch">–</dd><dt>Processing</dt><dd id="mi-proc">–</dd></dl>
+  </div>
+  <div class="card mt">
+    <h2>Record and play back</h2>
+    <p class="hint">Record a short clip to hear exactly how you sound. The recording stays in this tab and is deleted when you leave.</p>
+    <div class="row mt2"><div class="seg" id="mic-len" role="group" aria-label="Recording length"><button type="button" data-s="5" class="on">5 s</button><button type="button" data-s="10">10 s</button><button type="button" data-s="30">30 s</button></div><button type="button" class="btn" id="mic-rec" disabled>● Record</button><span class="mono hint" id="mic-rec-t"></span></div>
+    <div class="row mt2" id="mic-play" hidden><audio id="mic-audio" controls></audio><a class="btn sm" id="mic-dl" download="keywren-mic-test.webm" href="#">Download</a></div>
+  </div>
+</section>
+<!--/view:mic-->
+
+<!--view:webcam-->
+<section class="view" id="v-webcam" aria-label="Webcam test">
+  <div class="card">
+    <div class="row between"><h2 class="m0">Webcam</h2><span class="pill" id="cam-perm">Permission: not asked yet</span></div>
+    <div class="row mt">
+      <button type="button" class="btn primary" id="cam-start">Start webcam test</button>
+      <button type="button" class="btn" id="cam-stop" disabled>Stop</button>
+      <select id="cam-dev" disabled aria-label="Choose a camera"><option value="">Default camera</option></select>
+      <select id="cam-res" aria-label="Requested resolution"><option value="640x480">480p (640×480)</option><option value="1280x720" selected>720p (1280×720)</option><option value="1920x1080">1080p (1920×1080)</option><option value="3840x2160">4K (3840×2160)</option></select>
+      <label class="check"><input type="checkbox" id="cam-mirror" checked> Mirror</label>
+    </div>
+    <div class="msg mt2" id="cam-msg" role="status" hidden></div>
+    <div class="cam-stage mt" id="cam-stage"><video id="cam-video" class="mirror" playsinline muted></video><div class="cam-empty" id="cam-empty"><b>Camera is off</b><span>Press Start webcam test. Video stays on your device.</span></div></div>
+    <div class="stats5 mt">
+      <div class="stat"><b id="cam-wh">–</b><span>Resolution</span></div>
+      <div class="stat"><b id="cam-ar">–</b><span>Aspect ratio</span></div>
+      <div class="stat"><b id="cam-fps">–</b><span>Measured FPS</span></div>
+      <div class="stat"><b id="cam-fpsr">–</b><span>Reported FPS</span></div>
+      <div class="stat"><b id="cam-mp">–</b><span>Megapixels</span></div>
+    </div>
+    <div class="row mt"><button type="button" class="btn" id="cam-snap" disabled>📸 Take snapshot</button><span class="hint">Saved as PNG on your device.</span></div>
+    <div class="snaps mt2" id="cam-snaps"></div>
+  </div>
+</section>
+<!--/view:webcam-->
+
+<!--view:screen-->
+<section class="view" id="v-screen" aria-label="Dead pixel and screen test">
+  <div class="card">
+    <div class="row between"><h2 class="m0">Screen tests</h2><button type="button" class="btn primary" id="scr-start">Start fullscreen test <kbd class="dk">F</kbd></button></div>
+    <p class="hint mt2">Click a test to open it fullscreen. In fullscreen use <kbd>←</kbd> <kbd>→</kbd> or <kbd>Space</kbd> to change colour, click to go forward, <kbd>H</kbd> to hide the label and <kbd>Esc</kbd> to exit.</p>
+    <div class="swatches mt" id="scr-list"></div>
+    <div class="stats5 mt">
+      <div class="stat"><b id="sc-res">–</b><span>Screen (CSS px)</span></div>
+      <div class="stat"><b id="sc-phys">–</b><span>Approx. physical px</span></div>
+      <div class="stat"><b id="sc-dpr">–</b><span>Pixel ratio</span></div>
+      <div class="stat"><b id="sc-vp">–</b><span>Browser window</span></div>
+      <div class="stat"><b id="sc-depth">–</b><span>Colour depth</span></div>
+    </div>
+  </div>
+  <div class="stage" id="scr-stage" hidden tabindex="-1" aria-label="Fullscreen screen test"><div class="stage-label" id="scr-label"><b id="scr-name"></b><span id="scr-tip"></span><small>← → change · H hide · Esc exit</small></div></div>
+</section>
+<!--/view:screen-->
+
+<!--view:mouse-->
+<section class="view" id="v-mouse" aria-label="Mouse and CPS test">
+  <div class="card">
+    <div class="row between"><h2 class="m0">Clicks per second (CPS)</h2><div class="seg" id="cps-mode" role="group" aria-label="Test length"><button type="button" data-s="1">1 s</button><button type="button" data-s="5" class="on">5 s</button><button type="button" data-s="10">10 s</button><button type="button" data-s="30">30 s</button></div></div>
+    <div class="cps-area mt" id="cps-area" role="button" tabindex="0" aria-label="Click here as fast as you can"><b id="cps-big">Click to start</b><span id="cps-sub">The timer starts on your first click</span></div>
+    <div class="stats4 mt">
+      <div class="stat hero-stat"><b id="cps-val">0.00</b><span>CPS</span></div>
+      <div class="stat"><b id="cps-clicks">0</b><span>Clicks</span></div>
+      <div class="stat"><b id="cps-time">5.0</b><span>Seconds left</span></div>
+      <div class="stat"><b id="cps-best">–</b><span>Best (this length)</span></div>
+    </div>
+  </div>
+  <div class="card mt">
+    <div class="row between"><h2 class="m0">Buttons, scroll and double-click tester</h2><button type="button" class="btn sm" id="mb-reset">Reset</button></div>
+    <p class="hint mt2">Use your mouse inside the box. Every button (including back and forward side buttons) and the scroll wheel are captured here, and right-click menus are blocked.</p>
+    <div class="mb-grid mt">
+      <div class="mb-area" id="mb-area" aria-label="Mouse test area">
+        <div class="mouse" aria-hidden="true"><div class="mz mz-0" id="mz-0">L</div><div class="mz mz-1" id="mz-1"><i class="wheel" id="mz-wheel"></i></div><div class="mz mz-2" id="mz-2">R</div><div class="mz mz-3" id="mz-3">4</div><div class="mz mz-4" id="mz-4">5</div></div>
+        <span class="hint" id="mb-pos">Move the pointer here</span>
+      </div>
+      <div>
+        <table class="tbl" id="mb-table"><thead><tr><th>Button</th><th>Presses</th><th>Double-clicks</th></tr></thead><tbody></tbody></table>
+        <div class="stats2 mt2">
+          <div class="stat"><b id="mb-up">0</b><span>Scroll up</span></div>
+          <div class="stat"><b id="mb-down">0</b><span>Scroll down</span></div>
+          <div class="stat"><b id="mb-int" class="mono">–</b><span>Last double-click gap</span></div>
+          <div class="stat"><b id="mb-chat">0</b><span>Suspected chatter</span></div>
+        </div>
+        <p class="msg mt2" id="mb-warn" hidden></p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/view:mouse-->
+
+<!--view:refresh-->
+<section class="view" id="v-refresh" aria-label="Refresh rate test">
+  <div class="card">
+    <div class="row between"><h2 class="m0">Measured refresh rate</h2><button type="button" class="btn sm" id="rr-reset">Measure again</button></div>
+    <div class="rr-top mt">
+      <div class="rr-hz"><b id="rr-hz">–</b><span>Hz</span><small id="rr-snap">Measuring… keep this tab in front</small></div>
+      <div class="stats2">
+        <div class="stat"><b id="rr-ft" class="mono">–</b><span>Average frame time</span></div>
+        <div class="stat"><b id="rr-jit" class="mono">–</b><span>Jitter (std dev)</span></div>
+        <div class="stat"><b id="rr-mm" class="mono">–</b><span>Min / max frame</span></div>
+        <div class="stat"><b id="rr-drop">0</b><span>Dropped frames</span></div>
+      </div>
+    </div>
+    <h2 class="mt">Frame-time graph</h2>
+    <canvas id="rr-graph" class="graph" width="1200" height="200" aria-label="Frame time graph"></canvas>
+  </div>
+  <div class="card mt">
+    <div class="row between"><h2 class="m0">Motion test</h2><div class="seg" id="rr-speed" role="group" aria-label="Speed"><button type="button" data-v="480">480 px/s</button><button type="button" data-v="960" class="on">960 px/s</button><button type="button" data-v="1920">1920 px/s</button></div></div>
+    <p class="hint mt2">Each lane moves at the same speed. The top lane updates every frame; the others skip frames, so you can see what lower refresh rates look like on your screen.</p>
+    <canvas id="rr-ufo" class="ufo mt2" width="1200" height="300" aria-label="Moving objects at different frame rates"></canvas>
+  </div>
+</section>
+<!--/view:refresh-->
+
+</div>
+<aside class="rail"><!-- AD SLOTS: sticky sidebar 300x250 x2 -->
+<div class="ad ad-rect" id="ad-side-1" data-ad-slot="side-1" aria-label="Advertisement"></div><div class="ad ad-rect" id="ad-side-2" data-ad-slot="side-2" aria-label="Advertisement"></div></aside>
+</div>
+<!-- AD SLOT: footer 728x90 -->
+<div class="ad ad-foot" id="ad-foot" data-ad-slot="foot" aria-label="Advertisement"></div>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="consent" id="consent" role="dialog" aria-label="Cookie notice"><span>Keywren uses ads to stay free. Your camera, mic, keystrokes and results never leave your device. <a href="privacy.html">Privacy</a></span><button type="button" class="btn" id="c-no">Essential only</button><button type="button" class="btn primary" id="c-yes">OK</button></div>
+<footer><div class="footlinks"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div><br>Keywren · every test runs entirely in your browser</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob: mediastream:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mic Test: Check Your Microphone Online (Level &amp; Playback) | Keywren</title>
+<meta name="description" content="Test your microphone online with a live level meter, waveform, device picker and a short recording you can play back. Audio never leaves your device.">
+<meta name="theme-color" content="#090d10">
+<link rel="canonical" href="https://cinch2108.github.io/keywren/mic-test/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2319c3d6'/%3E%3Cstop offset='1' stop-color='%238be05a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Crect x='7' y='10' width='18' height='12' rx='2.5' fill='none' stroke='%2305161b' stroke-width='2.2'/%3E%3Cpath d='M11 14h2M15 14h2M19 14h2M12 18h8' stroke='%2305161b' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Keywren">
+<meta property="og:title" content="Mic Test: Check Your Microphone Online (Level &amp; Playback) | Keywren">
+<meta property="og:description" content="Test your microphone online with a live level meter, waveform, device picker and a short recording you can play back. Audio never leaves your device.">
+<meta property="og:url" content="https://cinch2108.github.io/keywren/mic-test/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mic Test: Check Your Microphone Online (Level &amp; Playback) | Keywren">
+<meta name="twitter:description" content="Test your microphone online with a live level meter, waveform, device picker and a short recording you can play back. Audio never leaves your device.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Keywren","url":"https://cinch2108.github.io/keywren/mic-test/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free typing speed test, keyboard tester, microphone test, webcam test, dead pixel and screen test, mouse and CPS test, and monitor refresh rate test. Everything runs locally in the browser."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why does my browser say the microphone is blocked?", "acceptedAnswer": {"@type": "Answer", "text": "You (or a setting) denied permission earlier. Click the lock or camera icon in the address bar, set Microphone to Allow for this site and press Start mic test again. On macOS, also check System Settings → Privacy & Security → Microphone."}}, {"@type": "Question", "name": "Is my voice recorded or uploaded?", "acceptedAnswer": {"@type": "Answer", "text": "No. The level meter and waveform are computed in your browser with the Web Audio API, and recordings are stored in memory in this tab only. Nothing is sent to a server, and the recording is deleted when you leave the page."}}, {"@type": "Question", "name": "What is a good microphone level?", "acceptedAnswer": {"@type": "Answer", "text": "For speech, peaks around −12 dB and an average around −20 to −30 dB are ideal. If the meter shows “Clipping” your voice will distort, so move back or lower the input gain. “Quiet” means people may struggle to hear you."}}, {"@type": "Question", "name": "Why is echo cancellation turned off?", "acceptedAnswer": {"@type": "Answer", "text": "Keywren asks for the raw microphone signal so you hear what the mic really picks up. Video call apps usually turn on echo cancellation, noise suppression and auto gain, so you may sound slightly different in a call."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Keywren", "item": "https://cinch2108.github.io/keywren/"}, {"@type": "ListItem", "position": 2, "name": "Mic Test", "item": "https://cinch2108.github.io/keywren/mic-test/"}]}</script>
+</head>
+<body data-page="mic">
+<a class="skip" href="#main">Skip to tool</a>
+<header><div class="nav">
+  <a class="logo" href="../" aria-label="Keywren home"><i></i>Keywren</a>
+  <nav class="tabs" id="tabs" aria-label="Tools"><a class="tab" href="../">Typing</a><a class="tab" href="../keyboard-tester/">Keyboard</a><a class="tab active" href="../mic-test/" aria-current="page">Mic</a><a class="tab" href="../webcam-test/">Webcam</a><a class="tab" href="../dead-pixel-test/">Screen</a><a class="tab" href="../mouse-test/">Mouse</a><a class="tab" href="../refresh-rate-test/">Refresh rate</a></nav>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <h1>Mic test with a live <span>level meter and playback.</span></h1>
+  <p>See instantly whether your microphone works, how loud it is and how you actually sound. Pick between microphones, record a short clip and play it back. The audio never leaves this tab.</p>
+  <p class="privacy-note"><span class="dot"></span>Runs 100% in your browser. No uploads, no sign-up.</p>
+</section>
+<!-- AD SLOT: top leaderboard 970x90 (responsive). Paste ad unit inside. -->
+<div class="ad ad-leader" id="ad-top" data-ad-slot="top" aria-label="Advertisement"></div>
+<div class="layout"><div class="content">
+
+
+
+<section class="view active" id="v-mic" aria-label="Microphone test">
+  <div class="card">
+    <div class="row between"><h2 class="m0">Microphone</h2><span class="pill" id="mic-perm">Permission: not asked yet</span></div>
+    <div class="row mt">
+      <button type="button" class="btn primary" id="mic-start">Start mic test</button>
+      <button type="button" class="btn" id="mic-stop" disabled>Stop</button>
+      <select id="mic-dev" class="grow" disabled aria-label="Choose a microphone"><option value="">Default microphone</option></select>
+    </div>
+    <div class="msg mt2" id="mic-msg" role="status" hidden></div>
+    <div class="meter mt" aria-hidden="true"><div class="meter-fill" id="mic-bar"></div><div class="meter-peak" id="mic-peak"></div><div class="meter-ticks"><span>-60</span><span>-45</span><span>-30</span><span>-15</span><span>0 dB</span></div></div>
+    <div class="row between mt2"><span class="mono big-read" id="mic-db" aria-live="off">– dB</span><span class="pill" id="mic-state">Off</span></div>
+    <canvas id="mic-wave" class="wave mt" width="1200" height="240" aria-label="Live waveform"></canvas>
+    <dl class="kv mono mt" id="mic-info"><dt>Device</dt><dd id="mi-dev">–</dd><dt>Sample rate</dt><dd id="mi-rate">–</dd><dt>Channels</dt><dd id="mi-ch">–</dd><dt>Processing</dt><dd id="mi-proc">–</dd></dl>
+  </div>
+  <div class="card mt">
+    <h2>Record and play back</h2>
+    <p class="hint">Record a short clip to hear exactly how you sound. The recording stays in this tab and is deleted when you leave.</p>
+    <div class="row mt2"><div class="seg" id="mic-len" role="group" aria-label="Recording length"><button type="button" data-s="5" class="on">5 s</button><button type="button" data-s="10">10 s</button><button type="button" data-s="30">30 s</button></div><button type="button" class="btn" id="mic-rec" disabled>● Record</button><span class="mono hint" id="mic-rec-t"></span></div>
+    <div class="row mt2" id="mic-play" hidden><audio id="mic-audio" controls></audio><a class="btn sm" id="mic-dl" download="keywren-mic-test.webm" href="#">Download</a></div>
+  </div>
+</section>
+
+
+
+
+
+</div>
+<aside class="rail"><!-- AD SLOTS: sticky sidebar 300x250 x2 -->
+<div class="ad ad-rect" id="ad-side-1" data-ad-slot="side-1" aria-label="Advertisement"></div><div class="ad ad-rect" id="ad-side-2" data-ad-slot="side-2" aria-label="Advertisement"></div></aside>
+</div>
+<article class="seo">
+<h2>How to use the Mic test</h2>
+<ol><li>Press Start mic test and allow microphone access when your browser asks.</li><li>Speak normally. The meter and waveform should move; aim for “Good level”, around −30 to −12 dB on speech.</li><li>If nothing moves, choose a different microphone in the device list. Headsets and webcams each show up as their own microphone.</li><li>Pick a length and press Record, then play the clip back to hear echo, noise or distortion.</li><li>Press Stop when you are done. The mic also turns off by itself when you switch tabs or leave the page.</li></ol>
+<h2>Frequently asked questions</h2>
+<details><summary>Why does my browser say the microphone is blocked?</summary><p>You (or a setting) denied permission earlier. Click the lock or camera icon in the address bar, set Microphone to Allow for this site and press Start mic test again. On macOS, also check System Settings → Privacy & Security → Microphone.</p></details><details><summary>Is my voice recorded or uploaded?</summary><p>No. The level meter and waveform are computed in your browser with the Web Audio API, and recordings are stored in memory in this tab only. Nothing is sent to a server, and the recording is deleted when you leave the page.</p></details><details><summary>What is a good microphone level?</summary><p>For speech, peaks around −12 dB and an average around −20 to −30 dB are ideal. If the meter shows “Clipping” your voice will distort, so move back or lower the input gain. “Quiet” means people may struggle to hear you.</p></details><details><summary>Why is echo cancellation turned off?</summary><p>Keywren asks for the raw microphone signal so you hear what the mic really picks up. Video call apps usually turn on echo cancellation, noise suppression and auto gain, so you may sound slightly different in a call.</p></details>
+<h2>More free device tests</h2>
+<div class="toollinks"><a href="../">Typing Speed Test<span>WPM and accuracy in 15 s to 2 min</span></a><a href="../keyboard-tester/">Keyboard Tester<span>Light up every key, check ghosting and rollover</span></a><a href="../webcam-test/">Webcam Test<span>Real resolution, FPS and snapshots</span></a><a href="../dead-pixel-test/">Dead Pixel Test<span>Find dead and stuck pixels in fullscreen</span></a><a href="../mouse-test/">Mouse Test<span>CPS click speed, buttons, scroll and double-clicks</span></a><a href="../refresh-rate-test/">Refresh Rate Test<span>Measure your monitor’s real Hz</span></a></div>
+</article>
+<!-- AD SLOT: footer 728x90 -->
+<div class="ad ad-foot" id="ad-foot" data-ad-slot="foot" aria-label="Advertisement"></div>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="consent" id="consent" role="dialog" aria-label="Cookie notice"><span>Keywren uses ads to stay free. Your camera, mic, keystrokes and results never leave your device. <a href="../privacy.html">Privacy</a></span><button type="button" class="btn" id="c-no">Essential only</button><button type="button" class="btn primary" id="c-yes">OK</button></div>
+<footer><!--team--><nav class="more-tools" aria-label="More free tools"><h2>More free tools</h2><ul><li><a href="https://cinch2108.github.io/chroma/" rel="noopener">Chroma</a><span>Color palettes, contrast checker &amp; gradients</span></li><li><a href="https://cinch2108.github.io/textforge/" rel="noopener">Textforge</a><span>Word counter, JSON, Base64, diff &amp; regex</span></li><li><a href="https://cinch2108.github.io/hourlark/" rel="noopener">Hourlark</a><span>Timer, stopwatch, Pomodoro &amp; world clock</span></li><li><a href="https://cinch2108.github.io/numora/" rel="noopener">Numora</a><span>30 calculators &amp; a unit converter</span></li><li><a href="https://cinch2108.github.io/pixelsmith/" rel="noopener">Pixelsmith</a><span>Compress, resize &amp; convert images</span></li><li><a href="https://cinch2108.github.io/mintkit/" rel="noopener">Mintkit</a><span>QR codes, barcodes &amp; passwords</span></li><li><a href="https://cinch2108.github.io/tagloom/" rel="noopener">Tagloom</a><span>SEO tools: meta tags, sitemaps &amp; schema</span></li><li><a href="https://cinch2108.github.io/postsmith/" rel="noopener">Postsmith</a><span>Social media tools: fancy text, counters &amp; hashtags</span></li><li><a href="https://cinch2108.github.io/mediaforge/" rel="noopener">Mediaforge</a><span>Convert, compress &amp; trim video and audio</span></li><li><a href="https://cinch2108.github.io/datakit/" rel="noopener">Sheetwise</a><span>CSV &amp; Excel tools: convert, clean &amp; merge</span></li><li><a href="https://cinch2108.github.io/" rel="noopener">LocalForge PDF</a><span>Merge, split, compress &amp; sign PDFs</span></li></ul></nav><!--/team--><div class="footlinks"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></div><br>Keywren · every test runs entirely in your browser</footer>
+
+<script src="../app.js" defer></script>
+</body>
+</html>

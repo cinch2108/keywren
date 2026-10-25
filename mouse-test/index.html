@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob: mediastream:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Test: CPS Click Speed, Buttons, Scroll &amp; Double-Click | Keywren</title>
+<meta name="description" content="Free mouse test: a clicks-per-second (CPS) test with 1, 5, 10 and 30 second modes, plus a button, scroll wheel and double-click tester that spots chattering switches.">
+<meta name="theme-color" content="#090d10">
+<link rel="canonical" href="https://cinch2108.github.io/keywren/mouse-test/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2319c3d6'/%3E%3Cstop offset='1' stop-color='%238be05a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Crect x='7' y='10' width='18' height='12' rx='2.5' fill='none' stroke='%2305161b' stroke-width='2.2'/%3E%3Cpath d='M11 14h2M15 14h2M19 14h2M12 18h8' stroke='%2305161b' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Keywren">
+<meta property="og:title" content="Mouse Test: CPS Click Speed, Buttons, Scroll &amp; Double-Click | Keywren">
+<meta property="og:description" content="Free mouse test: a clicks-per-second (CPS) test with 1, 5, 10 and 30 second modes, plus a button, scroll wheel and double-click tester that spots chattering switches.">
+<meta property="og:url" content="https://cinch2108.github.io/keywren/mouse-test/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mouse Test: CPS Click Speed, Buttons, Scroll &amp; Double-Click | Keywren">
+<meta name="twitter:description" content="Free mouse test: a clicks-per-second (CPS) test with 1, 5, 10 and 30 second modes, plus a button, scroll wheel and double-click tester that spots chattering switches.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Keywren","url":"https://cinch2108.github.io/keywren/mouse-test/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free typing speed test, keyboard tester, microphone test, webcam test, dead pixel and screen test, mouse and CPS test, and monitor refresh rate test. Everything runs locally in the browser."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good CPS score?", "acceptedAnswer": {"@type": "Answer", "text": "Most people click 6–7 times per second. 8–10 CPS is fast, and advanced techniques like jitter clicking or butterfly clicking can reach 12–20 CPS. Short tests give higher numbers than 30-second tests because your hand tires."}}, {"@type": "Question", "name": "How do I know if my mouse double clicks by itself?", "acceptedAnswer": {"@type": "Answer", "text": "Click once, slowly, many times in the tester. A healthy switch registers one press per click. If Keywren sees two presses of the same button less than 80 ms apart, it counts it as suspected chatter, which usually means the switch is wearing out."}}, {"@type": "Question", "name": "Why don’t my side buttons work?", "acceptedAnswer": {"@type": "Answer", "text": "Back and forward buttons are buttons 4 and 5. Some mice need their own software to send them, and some are remapped to keyboard shortcuts. If the tester shows nothing, check your mouse software or try another USB port."}}, {"@type": "Question", "name": "Will clicking here navigate away or open menus?", "acceptedAnswer": {"@type": "Answer", "text": "No. Inside the test boxes, right-click menus, middle-click scrolling and back/forward navigation are blocked so you can test every button safely."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Keywren", "item": "https://cinch2108.github.io/keywren/"}, {"@type": "ListItem", "position": 2, "name": "Mouse Test", "item": "https://cinch2108.github.io/keywren/mouse-test/"}]}</script>
+</head>
+<body data-page="mouse">
+<a class="skip" href="#main">Skip to tool</a>
+<header><div class="nav">
+  <a class="logo" href="../" aria-label="Keywren home"><i></i>Keywren</a>
+  <nav class="tabs" id="tabs" aria-label="Tools"><a class="tab" href="../">Typing</a><a class="tab" href="../keyboard-tester/">Keyboard</a><a class="tab" href="../mic-test/">Mic</a><a class="tab" href="../webcam-test/">Webcam</a><a class="tab" href="../dead-pixel-test/">Screen</a><a class="tab active" href="../mouse-test/" aria-current="page">Mouse</a><a class="tab" href="../refresh-rate-test/">Refresh rate</a></nav>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <h1>Mouse test and <span>CPS click speed test.</span></h1>
+  <p>Measure how fast you can click, then check every mouse button, the scroll wheel and side buttons. Keywren also flags suspiciously fast double clicks, a sign of a worn switch.</p>
+  <p class="privacy-note"><span class="dot"></span>Runs 100% in your browser. No uploads, no sign-up.</p>
+</section>
+<!-- AD SLOT: top leaderboard 970x90 (responsive). Paste ad unit inside. -->
+<div class="ad ad-leader" id="ad-top" data-ad-slot="top" aria-label="Advertisement"></div>
+<div class="layout"><div class="content">
+
+
+
+
+
+
+<section class="view active" id="v-mouse" aria-label="Mouse and CPS test">
+  <div class="card">
+    <div class="row between"><h2 class="m0">Clicks per second (CPS)</h2><div class="seg" id="cps-mode" role="group" aria-label="Test length"><button type="button" data-s="1">1 s</button><button type="button" data-s="5" class="on">5 s</button><button type="button" data-s="10">10 s</button><button type="button" data-s="30">30 s</button></div></div>
+    <div class="cps-area mt" id="cps-area" role="button" tabindex="0" aria-label="Click here as fast as you can"><b id="cps-big">Click to start</b><span id="cps-sub">The timer starts on your first click</span></div>
+    <div class="stats4 mt">
+      <div class="stat hero-stat"><b id="cps-val">0.00</b><span>CPS</span></div>
+      <div class="stat"><b id="cps-clicks">0</b><span>Clicks</span></div>
+      <div class="stat"><b id="cps-time">5.0</b><span>Seconds left</span></div>
+      <div class="stat"><b id="cps-best">–</b><span>Best (this length)</span></div>
+    </div>
+  </div>
+  <div class="card mt">
+    <div class="row between"><h2 class="m0">Buttons, scroll and double-click tester</h2><button type="button" class="btn sm" id="mb-reset">Reset</button></div>
+    <p class="hint mt2">Use your mouse inside the box. Every button (including back and forward side buttons) and the scroll wheel are captured here, and right-click menus are blocked.</p>
+    <div class="mb-grid mt">
+      <div class="mb-area" id="mb-area" aria-label="Mouse test area">
+        <div class="mouse" aria-hidden="true"><div class="mz mz-0" id="mz-0">L</div><div class="mz mz-1" id="mz-1"><i class="wheel" id="mz-wheel"></i></div><div class="mz mz-2" id="mz-2">R</div><div class="mz mz-3" id="mz-3">4</div><div class="mz mz-4" id="mz-4">5</div></div>
+        <span class="hint" id="mb-pos">Move the pointer here</span>
+      </div>
+      <div>
+        <table class="tbl" id="mb-table"><thead><tr><th>Button</th><th>Presses</th><th>Double-clicks</th></tr></thead><tbody></tbody></table>
+        <div class="stats2 mt2">
+          <div class="stat"><b id="mb-up">0</b><span>Scroll up</span></div>
+          <div class="stat"><b id="mb-down">0</b><span>Scroll down</span></div>
+          <div class="stat"><b id="mb-int" class="mono">–</b><span>Last double-click gap</span></div>
+          <div class="stat"><b id="mb-chat">0</b><span>Suspected chatter</span></div>
+        </div>
+        <p class="msg mt2" id="mb-warn" hidden></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+<aside class="rail"><!-- AD SLOTS: sticky sidebar 300x250 x2 -->
+<div class="ad ad-rect" id="ad-side-1" data-ad-slot="side-1" aria-label="Advertisement"></div><div class="ad ad-rect" id="ad-side-2" data-ad-slot="side-2" aria-label="Advertisement"></div></aside>
+</div>
+<article class="seo">
+<h2>How to use the Mouse test</h2>
+<ol><li>Choose a CPS test length: 1, 5, 10 or 30 seconds.</li><li>Click inside the big box as fast as you can. The timer starts on your first click and your clicks per second appear when it ends.</li><li>Your best score for each length is saved in your browser. Click again to retry.</li><li>In the tester below, press each button inside the box, including middle, back and forward. Scroll up and down to test the wheel.</li><li>Single-click slowly a few times. If “Suspected chatter” goes up, your mouse may be registering double clicks on its own.</li></ol>
+<h2>Frequently asked questions</h2>
+<details><summary>What is a good CPS score?</summary><p>Most people click 6–7 times per second. 8–10 CPS is fast, and advanced techniques like jitter clicking or butterfly clicking can reach 12–20 CPS. Short tests give higher numbers than 30-second tests because your hand tires.</p></details><details><summary>How do I know if my mouse double clicks by itself?</summary><p>Click once, slowly, many times in the tester. A healthy switch registers one press per click. If Keywren sees two presses of the same button less than 80 ms apart, it counts it as suspected chatter, which usually means the switch is wearing out.</p></details><details><summary>Why don’t my side buttons work?</summary><p>Back and forward buttons are buttons 4 and 5. Some mice need their own software to send them, and some are remapped to keyboard shortcuts. If the tester shows nothing, check your mouse software or try another USB port.</p></details><details><summary>Will clicking here navigate away or open menus?</summary><p>No. Inside the test boxes, right-click menus, middle-click scrolling and back/forward navigation are blocked so you can test every button safely.</p></details>
+<h2>More free device tests</h2>
+<div class="toollinks"><a href="../">Typing Speed Test<span>WPM and accuracy in 15 s to 2 min</span></a><a href="../keyboard-tester/">Keyboard Tester<span>Light up every key, check ghosting and rollover</span></a><a href="../mic-test/">Mic Test<span>Level meter, waveform and playback</span></a><a href="../webcam-test/">Webcam Test<span>Real resolution, FPS and snapshots</span></a><a href="../dead-pixel-test/">Dead Pixel Test<span>Find dead and stuck pixels in fullscreen</span></a><a href="../refresh-rate-test/">Refresh Rate Test<span>Measure your monitor’s real Hz</span></a></div>
+</article>
+<!-- AD SLOT: footer 728x90 -->
+<div class="ad ad-foot" id="ad-foot" data-ad-slot="foot" aria-label="Advertisement"></div>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="consent" id="consent" role="dialog" aria-label="Cookie notice"><span>Keywren uses ads to stay free. Your camera, mic, keystrokes and results never leave your device. <a href="../privacy.html">Privacy</a></span><button type="button" class="btn" id="c-no">Essential only</button><button type="button" class="btn primary" id="c-yes">OK</button></div>
+<footer><!--team--><nav class="more-tools" aria-label="More free tools"><h2>More free tools</h2><ul><li><a href="https://cinch2108.github.io/chroma/" rel="noopener">Chroma</a><span>Color palettes, contrast checker &amp; gradients</span></li><li><a href="https://cinch2108.github.io/textforge/" rel="noopener">Textforge</a><span>Word counter, JSON, Base64, diff &amp; regex</span></li><li><a href="https://cinch2108.github.io/hourlark/" rel="noopener">Hourlark</a><span>Timer, stopwatch, Pomodoro &amp; world clock</span></li><li><a href="https://cinch2108.github.io/numora/" rel="noopener">Numora</a><span>30 calculators &amp; a unit converter</span></li><li><a href="https://cinch2108.github.io/pixelsmith/" rel="noopener">Pixelsmith</a><span>Compress, resize &amp; convert images</span></li><li><a href="https://cinch2108.github.io/mintkit/" rel="noopener">Mintkit</a><span>QR codes, barcodes &amp; passwords</span></li><li><a href="https://cinch2108.github.io/tagloom/" rel="noopener">Tagloom</a><span>SEO tools: meta tags, sitemaps &amp; schema</span></li><li><a href="https://cinch2108.github.io/postsmith/" rel="noopener">Postsmith</a><span>Social media tools: fancy text, counters &amp; hashtags</span></li><li><a href="https://cinch2108.github.io/mediaforge/" rel="noopener">Mediaforge</a><span>Convert, compress &amp; trim video and audio</span></li><li><a href="https://cinch2108.github.io/datakit/" rel="noopener">Sheetwise</a><span>CSV &amp; Excel tools: convert, clean &amp; merge</span></li><li><a href="https://cinch2108.github.io/" rel="noopener">LocalForge PDF</a><span>Merge, split, compress &amp; sign PDFs</span></li></ul></nav><!--/team--><div class="footlinks"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></div><br>Keywren · every test runs entirely in your browser</footer>
+
+<script src="../app.js" defer></script>
+</body>
+</html>

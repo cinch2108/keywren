@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob: mediastream:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyboard Tester: Test Every Key, Ghosting &amp; Rollover | Keywren</title>
+<meta name="description" content="Free online keyboard tester. A full-size on-screen keyboard lights up every key you press, shows key codes and event details, and checks ghosting and key rollover.">
+<meta name="theme-color" content="#090d10">
+<link rel="canonical" href="https://cinch2108.github.io/keywren/keyboard-tester/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2319c3d6'/%3E%3Cstop offset='1' stop-color='%238be05a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Crect x='7' y='10' width='18' height='12' rx='2.5' fill='none' stroke='%2305161b' stroke-width='2.2'/%3E%3Cpath d='M11 14h2M15 14h2M19 14h2M12 18h8' stroke='%2305161b' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Keywren">
+<meta property="og:title" content="Keyboard Tester: Test Every Key, Ghosting &amp; Rollover | Keywren">
+<meta property="og:description" content="Free online keyboard tester. A full-size on-screen keyboard lights up every key you press, shows key codes and event details, and checks ghosting and key rollover.">
+<meta property="og:url" content="https://cinch2108.github.io/keywren/keyboard-tester/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Keyboard Tester: Test Every Key, Ghosting &amp; Rollover | Keywren">
+<meta name="twitter:description" content="Free online keyboard tester. A full-size on-screen keyboard lights up every key you press, shows key codes and event details, and checks ghosting and key rollover.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Keywren","url":"https://cinch2108.github.io/keywren/keyboard-tester/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free typing speed test, keyboard tester, microphone test, webcam test, dead pixel and screen test, mouse and CPS test, and monitor refresh rate test. Everything runs locally in the browser."}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is keyboard ghosting?", "acceptedAnswer": {"@type": "Answer", "text": "Ghosting is when a keyboard can’t detect a key because of the other keys you are holding. Cheap keyboards share wiring between keys, so some combinations silently drop a key press. Hold your common game or shortcut combos here to see if any key goes missing."}}, {"@type": "Question", "name": "What does N-key rollover (NKRO) mean?", "acceptedAnswer": {"@type": "Answer", "text": "Rollover is how many keys a keyboard can register at the same time. 6-key rollover is common on USB keyboards; NKRO keyboards register every key. The “Most keys at once” box shows the most simultaneous keys Keywren saw."}}, {"@type": "Question", "name": "Why don’t some keys work in the tester?", "acceptedAnswer": {"@type": "Answer", "text": "Some keys are handled by your operating system before the browser sees them, such as the Windows key on some systems, Fn, media keys and Print Screen (which may only send a key-up). Laptops also combine keys with Fn in hardware."}}, {"@type": "Question", "name": "What is the difference between event.key and event.code?", "acceptedAnswer": {"@type": "Answer", "text": "event.code is the physical key position (for example KeyQ), which stays the same in every language layout. event.key is the character it produces, such as “q”, “Q” or “a” on an AZERTY keyboard."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Keywren", "item": "https://cinch2108.github.io/keywren/"}, {"@type": "ListItem", "position": 2, "name": "Keyboard Tester", "item": "https://cinch2108.github.io/keywren/keyboard-tester/"}]}</script>
+</head>
+<body data-page="keyboard">
+<a class="skip" href="#main">Skip to tool</a>
+<header><div class="nav">
+  <a class="logo" href="../" aria-label="Keywren home"><i></i>Keywren</a>
+  <nav class="tabs" id="tabs" aria-label="Tools"><a class="tab" href="../">Typing</a><a class="tab active" href="../keyboard-tester/" aria-current="page">Keyboard</a><a class="tab" href="../mic-test/">Mic</a><a class="tab" href="../webcam-test/">Webcam</a><a class="tab" href="../dead-pixel-test/">Screen</a><a class="tab" href="../mouse-test/">Mouse</a><a class="tab" href="../refresh-rate-test/">Refresh rate</a></nav>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <h1>Keyboard tester for <span>every key and combo.</span></h1>
+  <p>Press each key and watch it light up on a full-size layout. See the exact key code and event data, and hold several keys at once to check for ghosting and rollover limits.</p>
+  <p class="privacy-note"><span class="dot"></span>Runs 100% in your browser. No uploads, no sign-up.</p>
+</section>
+<!-- AD SLOT: top leaderboard 970x90 (responsive). Paste ad unit inside. -->
+<div class="ad ad-leader" id="ad-top" data-ad-slot="top" aria-label="Advertisement"></div>
+<div class="layout"><div class="content">
+
+
+<section class="view active" id="v-keyboard" aria-label="Keyboard tester">
+  <div class="card">
+    <div class="row between"><h2 class="m0">Press every key</h2><div class="row tight"><label class="check"><input type="checkbox" id="kb-block" checked> Block browser shortcuts (F5, Tab, Space…)</label><button type="button" class="btn sm" id="kb-reset">Reset</button></div></div>
+    <div class="kb-wrap mt"><div class="kb" id="kb" role="img" aria-label="On-screen keyboard. Keys light up when pressed."></div></div>
+    <div class="legend mt2"><span><i class="lg down"></i>Held now</span><span><i class="lg done"></i>Tested</span><span><i class="lg"></i>Not pressed yet</span></div>
+    <div class="stats4 mt">
+      <div class="stat"><b id="kb-tested">0 / 0</b><span>Keys tested</span></div>
+      <div class="stat"><b id="kb-held">0</b><span>Held right now</span></div>
+      <div class="stat"><b id="kb-max">0</b><span>Most keys at once</span></div>
+      <div class="stat"><b id="kb-last" class="mono">–</b><span>Last key</span></div>
+    </div>
+  </div>
+  <div class="grid2 mt">
+    <div class="card"><h2>Last key event</h2>
+      <dl class="kv mono" id="kb-info"><dt>event.key</dt><dd id="ki-key">–</dd><dt>event.code</dt><dd id="ki-code">–</dd><dt>keyCode / which</dt><dd id="ki-kc">–</dd><dt>location</dt><dd id="ki-loc">–</dd><dt>repeat</dt><dd id="ki-rep">–</dd><dt>modifiers</dt><dd id="ki-mod">–</dd><dt>type</dt><dd id="ki-type">–</dd></dl>
+    </div>
+    <div class="card"><h2>Ghosting and rollover check</h2>
+      <p class="hint">Hold down several keys at the same time (try <kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd>F</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd> or <kbd>Shift</kbd><kbd>W</kbd><kbd>A</kbd><kbd>D</kbd><kbd>Space</kbd>). Every key you hold should appear below. If one is missing, your keyboard can't register that combination.</p>
+      <div class="keychips mt2" id="kb-heldlist" aria-live="polite"><span class="hint">No keys held</span></div>
+      <p class="mt2"><span class="pill" id="kb-nkro">Rollover: not measured yet</span></p>
+      <h2 class="mt">Event log</h2>
+      <ol class="log mono" id="kb-log"></ol>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+</div>
+<aside class="rail"><!-- AD SLOTS: sticky sidebar 300x250 x2 -->
+<div class="ad ad-rect" id="ad-side-1" data-ad-slot="side-1" aria-label="Advertisement"></div><div class="ad ad-rect" id="ad-side-2" data-ad-slot="side-2" aria-label="Advertisement"></div></aside>
+</div>
+<article class="seo">
+<h2>How to use the Keyboard tester</h2>
+<ol><li>Press any key. It turns bright while held and stays green once it has been tested.</li><li>Work across the whole keyboard until “Keys tested” reaches the total, including F-keys, arrows and the numpad.</li><li>Check the Last key event panel for event.key, event.code, keyCode, location (left, right or numpad) and modifiers.</li><li>To test ghosting, hold several keys together (for example W, A, S, D and Space). Every key you hold should appear in the list.</li><li>“Block browser shortcuts” stops keys like F5, Tab and Space from scrolling or reloading the page. Untick it to use Tab normally.</li></ol>
+<h2>Frequently asked questions</h2>
+<details><summary>What is keyboard ghosting?</summary><p>Ghosting is when a keyboard can’t detect a key because of the other keys you are holding. Cheap keyboards share wiring between keys, so some combinations silently drop a key press. Hold your common game or shortcut combos here to see if any key goes missing.</p></details><details><summary>What does N-key rollover (NKRO) mean?</summary><p>Rollover is how many keys a keyboard can register at the same time. 6-key rollover is common on USB keyboards; NKRO keyboards register every key. The “Most keys at once” box shows the most simultaneous keys Keywren saw.</p></details><details><summary>Why don’t some keys work in the tester?</summary><p>Some keys are handled by your operating system before the browser sees them, such as the Windows key on some systems, Fn, media keys and Print Screen (which may only send a key-up). Laptops also combine keys with Fn in hardware.</p></details><details><summary>What is the difference between event.key and event.code?</summary><p>event.code is the physical key position (for example KeyQ), which stays the same in every language layout. event.key is the character it produces, such as “q”, “Q” or “a” on an AZERTY keyboard.</p></details>
+<h2>More free device tests</h2>
+<div class="toollinks"><a href="../">Typing Speed Test<span>WPM and accuracy in 15 s to 2 min</span></a><a href="../mic-test/">Mic Test<span>Level meter, waveform and playback</span></a><a href="../webcam-test/">Webcam Test<span>Real resolution, FPS and snapshots</span></a><a href="../dead-pixel-test/">Dead Pixel Test<span>Find dead and stuck pixels in fullscreen</span></a><a href="../mouse-test/">Mouse Test<span>CPS click speed, buttons, scroll and double-clicks</span></a><a href="../refresh-rate-test/">Refresh Rate Test<span>Measure your monitor’s real Hz</span></a></div>
+</article>
+<!-- AD SLOT: footer 728x90 -->
+<div class="ad ad-foot" id="ad-foot" data-ad-slot="foot" aria-label="Advertisement"></div>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="consent" id="consent" role="dialog" aria-label="Cookie notice"><span>Keywren uses ads to stay free. Your camera, mic, keystrokes and results never leave your device. <a href="../privacy.html">Privacy</a></span><button type="button" class="btn" id="c-no">Essential only</button><button type="button" class="btn primary" id="c-yes">OK</button></div>
+<footer><!--team--><nav class="more-tools" aria-label="More free tools"><h2>More free tools</h2><ul><li><a href="https://cinch2108.github.io/chroma/" rel="noopener">Chroma</a><span>Color palettes, contrast checker &amp; gradients</span></li><li><a href="https://cinch2108.github.io/textforge/" rel="noopener">Textforge</a><span>Word counter, JSON, Base64, diff &amp; regex</span></li><li><a href="https://cinch2108.github.io/hourlark/" rel="noopener">Hourlark</a><span>Timer, stopwatch, Pomodoro &amp; world clock</span></li><li><a href="https://cinch2108.github.io/numora/" rel="noopener">Numora</a><span>30 calculators &amp; a unit converter</span></li><li><a href="https://cinch2108.github.io/pixelsmith/" rel="noopener">Pixelsmith</a><span>Compress, resize &amp; convert images</span></li><li><a href="https://cinch2108.github.io/mintkit/" rel="noopener">Mintkit</a><span>QR codes, barcodes &amp; passwords</span></li><li><a href="https://cinch2108.github.io/tagloom/" rel="noopener">Tagloom</a><span>SEO tools: meta tags, sitemaps &amp; schema</span></li><li><a href="https://cinch2108.github.io/postsmith/" rel="noopener">Postsmith</a><span>Social media tools: fancy text, counters &amp; hashtags</span></li><li><a href="https://cinch2108.github.io/mediaforge/" rel="noopener">Mediaforge</a><span>Convert, compress &amp; trim video and audio</span></li><li><a href="https://cinch2108.github.io/datakit/" rel="noopener">Sheetwise</a><span>CSV &amp; Excel tools: convert, clean &amp; merge</span></li><li><a href="https://cinch2108.github.io/" rel="noopener">LocalForge PDF</a><span>Merge, split, compress &amp; sign PDFs</span></li></ul></nav><!--/team--><div class="footlinks"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></div><br>Keywren · every test runs entirely in your browser</footer>
+
+<script src="../app.js" defer></script>
+</body>
+</html>
